@@ -1,0 +1,975 @@
+:root {
+    --green: #1b203d;
+    --beige: #f6f2e9;
+    --brown: #4B3621;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+    padding-bottom: 6rem;
+}
+
+/* Makes sure everything is centered. Always. */
+section,
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+}
+
+/* Sets minimum height for the sections, so they look better  */
+section {
+    /*overflow: hidden;*/
+    min-height: 100vh;
+}
+
+.text-left {
+    align-self: flex-start; /* if parent is flex, this moves the box to the left */
+    text-align: left;       /* left-align text inside the box */
+}
+
+/* Basic font settings  */
+h1,
+h2,
+h3,
+p {
+    font-family: 'Lora', serif;
+    color: var(--text);
+    font-weight: 400;
+    color: var(--green);
+    text-align: center;
+}
+
+/* Settings for the first row of every page */
+section.hero {
+    background-color: var(--beige);    
+    height: auto;       /* adjusts if heading is large */
+    font-size: 3vw; /* scales with width of viewport */
+    padding-top: 5vh; /* 5% of viewport height */
+}
+
+/* Non-hero sections */
+section.standard {
+    padding: 12rem;
+    z-index: 2;
+    background-color: white;
+}
+
+
+/***
+HOME
+***/
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.3rem, 2vw, 1rem);
+}
+
+/* Font settings for the main title */
+.home h1 {
+    font-family: "Prata";
+    text-align: center;
+    letter-spacing: .5px;
+    color: var(--green);
+    font-size: clamp(1rem, 5vw, 4rem);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Sets the wedding date below the h1 */
+.home .date {
+    color: var(--green);
+    font-size: 1.5rem;
+    display: inline;
+}
+
+
+/*Ablauf*/
+
+.ablauf {
+    font-family: "Lora", serif;
+    margin: 0 auto;
+    padding: 2vh;
+    color: var(--green);
+    text-align: center;
+
+    /* Decorative background images */
+    background-image: url('images/drink.png'), url('images/croissant.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom; /* adjust positions */
+    background-size: 30vw auto, 20vw auto; /* scale images individually */
+}
+
+.ablauf h2 {
+    margin-bottom: 2vh;
+    color: var(--green);
+    background: none; /* remove any background from h3 */
+}
+
+.ablauf h3 {
+    font-size: 2.5em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;    
+    background: none; /* remove any background from h3 */
+}
+
+.day {
+    margin-bottom: 2vhpx;
+}
+
+.day h3 {
+    /**font-family: 'Parisienne';
+    text-decoration: underline; */
+    font-variant: small-caps;
+    font-size: 2rem;
+    margin-bottom: 2vh;
+    color: var(--green);
+}
+
+.day ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.day li {
+    margin-bottom: 4vh;
+}
+
+.time {
+    font-size: 1.5em;
+    color: var(--green);
+}
+
+.event-name {
+    font-size: 2.5em; /* main event font size */
+    font-family: 'MonteCarlo';
+    /* font-weight: bold; /* optional */
+    /*font-variant: small-caps;*/
+    margin-left: 2vh;
+    color: var(--green); 
+}
+
+
+.dress-code {
+    display: block;   /* starts on new line but inside the li */
+    font-style: italic;
+    color: var(--brown);
+    font-size: 1.5em;
+}
+
+/**
+ Location
+**/
+
+.location-section {
+    display: flex;
+    flex-direction: column; /* ensure side-by-side */
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--beige);
+}
+
+/* Flex row for image + info */
+.location-content {
+    display: flex;
+    flex-direction: row; /* mobile first */
+    width: 100%;
+}
+
+.location-section h2 {
+    font-size: 2.5em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.location-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* this is the fix */
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+.location-image p {
+    padding-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.location-image img {
+    width: 100%;
+    height: auto;
+
+    padding: 20px;                   /* passepartout */
+    border: 8px solid var(--green);   /* frame */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    /* make padding & border included in width */
+    box-sizing: border-box;
+}
+
+.maps-link {
+    margin-top: 5vh;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--brown);
+}
+
+.maps-link:hover {
+    text-decoration: underline;
+    color: var(--brown);
+}
+
+
+.location-info {
+    flex: 1;
+    padding: 4vh 8vh 4vh 4vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;  
+}
+
+.location-title {
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Lora";
+}
+
+.location-description {
+    margin-top: 2vh;
+    line-height: 1;
+    font-size: 1.5rem;
+    color: var(--brown);
+}
+
+.arrival-options {
+    margin-top: 2vh;
+    align-self: flex-start;
+    text-align: left; 
+    width: 100%;
+}
+
+.location-info .arrival-option {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.arrival-option {
+    margin-bottom: 2vh;
+    text-align: left;
+    margin-left: 0;
+}
+
+.arrival-option h3 {
+    font-size: 1.3em;
+    color: var(--green);
+    margin-bottom: 3vh;
+    text-decoration: underline;
+    font-family: "Lora";
+}
+
+
+.arrival-option p {
+    font-size: 1.2em;
+    color: var(--brown);
+    line-height: 1.5;
+    text-align: left !important;
+}
+
+
+/**
+ Menu
+**/
+
+div.menu-pers {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);  /* subtle shadow for depth */
+    border-radius: 100px;
+    border: 1px solid var(--green);          /* visible border */
+    border-radius: 100px;
+    height: 60px;
+    width: 70vw;
+    font-family: "Lora";
+    font-size: 1.2rem;
+    transform: translateX(-50%);
+
+    /* Make it persist at the bottom */
+    position: fixed;
+    bottom: 20px;           /* distance from bottom */
+    left: 50%;              /* center horizontally */
+    z-index: 1000;          /* keep above other content */
+}
+
+/* Add separators */
+div.menu-pers::before,
+div.menu-pers::after {
+    content: "";
+    position: absolute;
+    top: 30%;           /* start slightly below top */
+    bottom: 30%;        /* end slightly above bottom */
+    width: 1px;         /* thickness of the separator */
+    background-color: var(--green);  /* semi-transparent green */
+}
+
+div.menu-pers::before {
+    left: calc(100% / 3);   /* first separator at 1/3 */
+}
+
+div.menu-pers::after {
+    left: calc(2 * 100% / 3); /* second separator at 2/3 */
+}
+
+.menu-pers a {
+    flex: 1;                        /* 🔑 equal width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-pers a:hover {
+    color: var(--green);
+    transform: translateY(-2px);
+}
+
+.stay-btn .short-text {
+    display: none;
+}
+
+/**
+Stays Section
+**/
+.stays-section {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding-bottom: 3rem; /* or adjust to your desired space */
+}
+
+.stays-section::after {
+    content: "";
+    display: block;
+    height: 3rem; /* adjust space as needed */
+}
+
+.stays-section h3 {
+    font-size: 2.5em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.stays-content {    
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4vw; /* only content gets padding */
+}
+
+.hotel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box; /* include padding in width */
+    margin-bottom: 4vh; /* space between hotels */
+    padding-bottom: 4vh; /* extra spacing before the separator */
+}
+
+.hotel-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* very subtle line */
+    margin: 4vh 0; /* vertical spacing between hotels */
+    width: 80%;    /* optionally shorter than full width */
+    margin-left: auto;
+    margin-right: auto; /* center the line */
+}
+
+.hotel-image-wrapper {
+    flex: 0 0 33%;  /* take 33% of width */
+    max-width: 33%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;  /* space around the image */
+    box-sizing: border-box;
+}
+
+.hotel-images img {
+    display: none;      /* hide non-active images */
+    width: 100%;        /* fill the wrapper width */
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45); /* subtle shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.hotel-images img.active {
+    display: block;
+}
+
+.hotel-info {
+    flex: 1;            /* take remaining 67% */
+    padding: 2vh 4vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.image-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: none;         /* no background */
+    border: none;             /* no border */
+    padding: 0.2rem;          /* small clickable area */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;             /* slightly subtle until hovered */
+}
+
+.image-btn:hover {
+    transform: translateY(-50%) scale(1.2);  /* subtle pop on hover */
+    opacity: 1;
+}
+
+.image-btn.prev {
+  left: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.image-btn.next {
+  right: 0;
+  transform: translateX(100%) translateY(-50%);
+}
+
+.hotel-info {
+    flex: 1;
+    padding: 4vh 8vh 4vh 4vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;  
+}
+
+.hotel-description {
+    margin-top: 2vh;
+    align-self: flex-start;
+    text-align: left; 
+    width: 100%;
+}
+
+.hotel-info h3 {
+    font-size: 2em;
+    color: var(--green);
+    margin-bottom: 1vh;
+    font-family: "Lora";
+    text-align: left !important;
+}
+
+.hotel-description p {
+    font-size: 1.2em;
+    color: var(--brown);
+    line-height: 1.2;
+    text-align: left !important;
+    margin-right: 3vh;
+}
+
+
+.hotel-link {
+    display: inline-block;
+    margin-top: 2vh;
+    padding: 0.8em 1.5em;
+    color: var(--brown);              /* text matches site palette */
+    font-size: 1rem;
+    font-family: "Lora";
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1); /* subtle border for definition */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle depth */
+    transition: background-color 0.3s, transform 0.2s;
+
+    
+    /* Align left */
+    align-self: flex-start;   /* key property */
+    text-align: center;       /* text inside button still centered */
+}
+
+.hotel-link:hover {
+    background-color: rgba(0,0,0,0.05);  /* slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+/**
+ Registry
+**/
+
+.registry {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    background-color: var(--beige); 
+}
+
+.registry h2 {
+    font-size: 2.5em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.registry h3 {
+    font-size: 1.5em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.registry h4 {
+    font-size: 1.3em;
+    color: var(--green);
+    font-family: "Lora";
+    text-align: center;
+}
+
+.registry-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    width: 100%;
+}
+
+.registry-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+}
+
+.registry-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.registry-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.registry-desc {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.registry-status {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.registry-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.registry-button:hover {
+    background: #555;
+}
+
+.registry_reg_text p {
+    font-family: 'Lora', serif;   /* example font */
+    font-size: 1.5rem;            /* adjust size as needed */
+    line-height: 1.6;             /* spacing between lines */
+    color: var(--green);          /* text color */
+    text-align: center !important;             /* alignment */
+    margin-bottom: 1.5rem;        /* spacing between paragraphs */
+}
+
+
+/***
+RESPONSIVENESS
+***/
+@media (max-width: 1200px) {
+    .home h1 {
+        font-size: 4rem;
+    }
+
+    .location-section {
+        flex-direction: column;       /* stack vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    section.standard {
+        padding: 8rem;
+    }
+
+    .location-section {
+        flex-direction: column;       /* stack vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    section.hero {
+        /*overflow: hidden;*/
+        min-height: 100vh;
+    }
+
+    section.hero h1 {
+        margin-top: 2rem;
+    }
+
+    p.date {
+        margin-top: 3rem;    /* space above */
+        margin-bottom: 3rem; /* space below */
+    }
+
+    section {
+        /*overflow: hidden;*/
+        min-height: 0;
+    }
+
+    .stay-btn .full-text {
+        display: none;
+    }
+    .stay-btn .short-text {
+        display: inline;
+    }
+
+    .date span {
+        display: block;
+    }
+
+    .hero img {
+        width: 95%;                     /* scale image down */
+        border: 8px solid var(--green); /* frame color */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* subtle shadow */
+        box-sizing: border-box;         /* include padding & border in width */
+        display: block;                 /* ensure proper display */
+        margin: 0 auto;                 /* center image */
+    }
+
+    img {
+        /**width: 90vw;*/   /* viewport width */
+        max-width: 100%;
+        /**border: 3px solid var(--green);*/   /* frame */
+    }
+
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .columns .column:first-child {
+        margin-bottom: 8rem;
+    }
+
+    .column {
+        padding: 0rem;
+        width: 100%;
+    }
+
+    .ablauf {
+        background-image: none;
+    }
+
+    section.ablauf h3 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+
+    .day h3 {
+        font-variant: small-caps;
+        text-decoration: underline;
+        font-size: 1.5rem;
+        margin-bottom: 2vh;
+        color: var(--green);
+    }
+
+    .time {
+        font-size: 1em;
+        font-weight: bold;
+        color: var(--green);
+    }
+
+    .event-name {
+        font-size: 1.3em; /* main event font size */
+        font-weight: normal; /* optional */
+        margin-left: 2vh;
+        color: var(--green); 
+    }
+
+
+    .dress-code {
+        display: block;   /* starts on new line but inside the li */
+        font-style: italic;
+        color: var(--brown);
+        font-size: 0.7em;
+    }
+
+
+    .location-section {
+        flex-direction: column;       /* stack vertically */
+        align-items: center;
+    }
+
+    section.location-section h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        margin: 0;
+    }
+
+    .location-content {
+        display: flex;
+        flex-direction: column; /* mobile first */
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .location-info {
+        width: 100%;
+        padding: 3rem 3rem;
+        text-align: left;
+    }
+
+    .location-image {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .location-image img {
+        width: 99%;          /* slightly larger than before */
+        max-width: none;     /* let it grow within the container */
+        height: auto;
+
+        padding: 2px;       /* reduced from 20px to 10px */
+        border: 4px solid var(--green); 
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+        box-sizing: border-box; /* keep padding & border included in width */
+    }
+
+    .arrival-options {
+        display: flex;
+        flex-direction: column;
+        text-align: center !important;
+        align-items: center;
+    }
+
+    .arrival-option {
+        margin-bottom: 0.5vh;
+        text-align: center !important;
+        padding: 2rem;
+    }
+
+    .arrival-option h3 {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    section.location h3 {
+        text-align: center !important;   /* already set */
+        font-size: 2rem;
+    }
+
+    /**.arrival-option h3 {
+        font-size: 1.3em;
+        color: var(--green);
+        margin-bottom: 0.5vh;
+        /**text-decoration: underline;
+        text-align: center !important;
+        font-family: "Lora";
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+    }*/
+
+    .arrival-option p {
+        text-align: center !important;
+    }
+
+    div.menu-pers {
+        width: 90vw;
+        height: 50px;
+        font-size: 1rem;
+        bottom: 10px;
+        border-radius: 60px;
+        padding-bottom: env(safe-area-inset-bottom);
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+        word-wrap: break-word;    /* break long words if needed */
+        hyphens: auto;            /* insert hyphen automatically if supported */
+    }
+
+    .menu-pers a {
+        padding: 8px 12px;
+        word-wrap: break-word;    /* break long words if needed */
+        hyphens: auto;            /* insert hyphen automatically if supported */
+    }
+
+    .stays-section,
+    .hotel {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stays-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    section.stays-section h3 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        margin: 0;
+    }
+
+    /* Kill desktop row layout */
+    .hotel {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Image side */
+    .hotel-image-wrapper {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .hotel-images img {
+        width: 100%; /* Scale image to container width */
+        display: none; /* Only active image shows */
+    }
+
+    .hotel-images img {
+        width: 100%; /* Scale image to container width */
+        display: none; /* Only active image shows */
+    }
+
+    .hotel-images img.active {
+        display: block;
+    }
+
+    /* Text side */
+    .hotel-info {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hotel-info h3,
+    .hotel-description,
+    .hotel-description p {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: clamp(250px, 90%, 600px); /* Keeps the text readable on any screen */
+    }
+
+    /* Button */
+    .hotel-link {
+        align-self: center;
+        margin-top: 1.5rem;
+    }
+
+    section.registry h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        margin: 0;
+    }
+
+    .registry-grid {
+        grid-template-columns: 1fr; /* max 1 per row */
+    }
+
+    .registry_reg_text p {
+        font-family: 'Lora', serif;   /* example font */
+        font-size: 1.2rem;            /* adjust size as needed */
+        line-height: 1.6;             /* spacing between lines */
+        color: var(--green);          /* text color */
+        text-align: center !important;             /* alignment */
+        margin-bottom: 1.5rem;        /* spacing between paragraphs */
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .internal .navigation {
+        position: fixed;
+    }
+}
+
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
+}

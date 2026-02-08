@@ -1,0 +1,698 @@
+<!DOCTYPE html lang="en">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Kajo & Moritz </title>
+    <!-- <link rel="shortcut icon" type="image/png" href="assets/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" href="/assets/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/assets/favicon.ico"> -->
+
+    <meta property="og:site_name" content="Kajo & Moritz" />
+    <meta property="og:url" content="kajoundmoritz.de" />
+    <meta property="og:type" content="website" />
+    <meta name="title" property="og:title" content="Kajo & Moritz" />
+    <meta name="description" property="og:description" content="Kajo und Moritz" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="theme-color" content="#f6f2e9">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="all">
+
+    <style>
+    .language-switcher {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
+    }
+    .language-switcher select {
+        font-family: inherit;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    </style>
+</head>
+
+
+<body class="home">
+
+    
+    <!-- LANGUAGE SWITCHER -->
+    <div class="language-switcher">
+        <select id="languageSelect">
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+        </select>
+    </div>
+
+    <section class="hero">
+        <div>
+            <h1>
+                Kajo & Moritz
+            </h1>
+            <p class="date">
+                <span class="venue">Château de Vauchelles - </span>
+                <span class="dates" data-i18n="title_date">May 8 to May 10, 2026</span>
+            </p>
+        </div>
+        <picture>
+            <source srcset="images/schloss.jpg" media="(max-width: 768px)">
+            <img class ="img-bottom" src="images/einladung.jpeg">
+        </picture>
+        <div class="menu-pers">
+            <a href="#location" data-i18n="menu_venue">Travelling</a>
+            <a href="#stays" class="stay-btn">
+                <span class="full-text" data-i18n="menu_stay">Where to stay</span>
+                <span class="short-text" data-i18n="menu_rooms">Rooms</span>
+            </a>
+            <a href="#registry" data-i18n="menu_registry">Registry</a>
+        </div>
+    </section>
+
+    <section id="Ablauf" class="ablauf">
+
+        <h3 class="ablauf" data-i18n="ablauf">Ablauf</h3>
+
+        <div class="day">
+            <h3 data-i18n="friday">Friday</h3>
+            <ul>
+                <li>
+                    <span class="time" data-i18n="friday_evening">From 7 PM</span>
+                    <span class="event-name">Une Soirée de Printemps à la Campagne</span><br>
+                    <span class="dress-code">Élégant, mais sans excès</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="day">
+            <h3 data-i18n="saturday">Saturday</h3>
+            <ul>
+                <li>
+                    <span class="time" data-i18n="time_church">12:00 PM - 1:00 PM</span>
+                    <span class="event-name" data-i18n="ceremony">Ceremony</span><br>
+                    <span class="dress-code" data-i18n="dress_day">Morning Dress / Dark Suit</span>
+                </li>
+                <li>
+                    <span class="time" data-i18n="time_reception">1:00 PM - 4:00 PM</span>
+                    <span class="event-name" data-i18n="reception">Reception</span><br>
+                    <span class="dress-code" data-i18n="dress_day">Morning Dress / Dark Suit</span>
+                </li>
+                <li>
+                    <span class="time" data-i18n="time_party">7:00 PM</span>
+                    <span class="event-name">La Grande Fête</span><br>
+                    <span class="dress-code" data-i18n="dress_evening">Black Tie / Dark Suit</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="day">
+            <h3 data-i18n="sunday">Sunday</h3>
+            <ul>
+                <li>
+                    <span class="time" data-i18n="time_brunch">From 11:00 AM</span>
+                    <span class="event-name" data-i18n="brunch">Brunch</span>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="location" class="location-section">
+
+        <h2 class="location-title" data-i18n="getting_there">Getting to <br> Château De Vauchelles</h2>
+
+        <div class="location-content">
+
+            <div class="location-image">
+                
+                <img src="images/maps_overview.png" alt="Location photo">
+
+                <p>Le Château, Rue de Mouflers <br> 80620 Vauchelles-lès-Domart</p>
+
+                <a class="maps-link" 
+                href="https://www.google.com/maps/place/Ch%C3%A2teau+de+Vauchelles+:+Mariages,+S%C3%A9minaires,+Chambres+d'H%C3%B4tes,+proche+Amiens/@50.0531396,2.0533062,17z/data=!4m10!3m9!1s0x47dd86f12043d46b:0xe659485213605910!5m3!1s2025-12-01!4m1!1i2!8m2!3d50.0531362!4d2.0558865!16s%2Fg%2F11b73qw8m_?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" 
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="open_maps"
+                >
+                Open in Google Maps
+                </a>
+
+                <a class="maps-link" 
+                href="https://maps.apple.com/place?center=50.05265970069901%2C2.055019800000025&span=0.014532261670026969%2C0.01923803784407596" 
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="open_maps_apple"
+                >
+                Open in Apple Maps
+                </a>
+
+            </div>
+
+            <div class="location-info">
+
+                <!-- Arrival options -->
+                <div class="arrival-options">
+                    <div class="arrival-option">
+                        <h3 data-i18n="by_plane">Arriving by Plane</h3>
+                        <p data-i18n="plane_text">Of the two airports in Paris, we recommend using Charles De Gaulle from where it is a 60-90 minute drive to the venue. We are thinking about providing a bus on Friday from Charles De Gaulle - please reach out if you are interested!</p>
+                    </div>
+
+                    <div class="arrival-option">
+                        <h3 data-i18n="by_train">Arriving by Train</h3>
+                        <p data-i18n="train_text">The closest major train station is Amiens. From there, a taxi or rental car can take you to the château in about 30 minutes.</p>
+                    </div>
+
+                    <div class="arrival-option">
+                        <h3 data-i18n="by_car">Arriving by Car</h3>
+                        <p data-i18n="car_text">Driving from Paris is straightforward via the A16 and D933. Parking is available on-site. We are happy to connect you with others for ridesharing options, so please reach out to us!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stays" class="stays-section">
+
+        <h3 class="stays-section" data-i18n="stays">Accommodations</h3>
+
+        <hr class="hotel-separator">
+
+        <div class="stays-content">
+
+            <div class="hotel">
+                <div class="hotel-image-wrapper">
+                    <div class="hotel-images">
+                        <img src="images/Hotels/chateau_zimmer_1.jpg" alt="Hotel Image 1" class="active">
+                        <img src="images/Hotels/cheateau_zimmer_2.jpg" alt="Hotel Image 2">
+                        <img src="images/Hotels/chateau_zimmer_3.jpg" alt="Hotel Image 3">
+                    </div>
+                    
+                    <button class="image-btn prev" aria-label="Previous Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <button class="image-btn next" aria-label="Next Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3 class="hotel-name">Château De Vauchelles</h3>
+
+                    <!-- Arrival options -->
+                    <div class="hotel-description">
+                        <p data-i18n="hotel_chateau">The château itself offers 18 rooms and 3 apartments for 60 guests. We would like to prioritize families with children, but we don't anticipate that this will exhaust all rooms. The booking of the rooms has to go through us, so if you are interested in staying at the château, please reach out to us.</p>
+                    </div>
+
+                    <!-- Hotel website button -->
+                    <a href="https://hotelwebsite.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="hotel-link">
+                    Hotel Website
+                    </a>
+                </div>
+            </div>
+
+            <hr class="hotel-separator">
+
+            <div class="hotel">
+                <div class="hotel-image-wrapper">
+                    <div class="hotel-images">
+                        <img src="images/Hotels/jean_bruges_1.jpg" alt="Hotel Image 1" class="active">
+                        <img src="images/Hotels/jean_bruges_2.jpg" alt="Hotel Image 2">
+                        <img src="images/Hotels/jean_bruges_3.jpg" alt="Hotel Image 3">
+                        <img src="images/Hotels/jean_bruges_4.jpeg" alt="Hotel Image 4">
+                    </div>
+                    
+                    <button class="image-btn prev" aria-label="Previous Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <button class="image-btn next" aria-label="Next Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3 class="hotel-name">Hôtel Jean De Bruges</h3>
+
+                    <!-- Arrival options -->
+                    <div class="hotel-description">
+                        <p data-i18n="hotel_jdb">The hotel Jean De Bruges, located at the gateway to the Baie de Somme, has 9 rooms for 16 guests. All rooms have been reserved for the wedding. Bed and breakfast is included. The hotel is approximately 14 minutes by car from the venue.</p>
+                    </div>
+
+                    <!-- Hotel website button -->
+                    <a href="https://www.hotel-jean-de-bruges.fr/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="hotel-link">
+                    Hotel Website
+                    </a>
+                </div>
+            </div>
+
+
+            <hr class="hotel-separator">
+
+            <div class="hotel">
+                <div class="hotel-image-wrapper">
+                    <div class="hotel-images">
+                        <img src="images/Hotels/relais_beffroi_1.jpg" alt="Hotel Image 1" class="active">
+                        <img src="images/Hotels/relais_beffroi_2.jpg" alt="Hotel Image 2">
+                        <img src="images/Hotels/relais_beffroi_3.jpg" alt="Hotel Image 3">
+                        <img src="images/Hotels/relais_beffroi_4.jpg" alt="Hotel Image 4">
+                    </div>
+                    
+                    <button class="image-btn prev" aria-label="Previous Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <button class="image-btn next" aria-label="Next Image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3 class="hotel-name">Relais Du Beffroi</h3>
+
+                    <!-- Arrival options -->
+                    <div class="hotel-description">
+                        <p data-i18n="hotel_rb">The hotel Le Relais du Beffroi, located in Saint-Riquier (Somme), offers a spa and private parking. There 8 rooms for 16 guests and 3 children. All rooms have been reserved for the wedding. The hotel is approximately 14 minutes by car from the venue.</p>
+                    </div>
+
+                    <!-- Hotel website button -->
+                    <a href="https://www.relais-du-beffroi.fr/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="hotel-link">
+                    Hotel Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registry" class="registry">
+
+        <h2 class="registry" data-i18n="registry">Registry</h2>
+
+        <div class="registry_reg_text">
+            <p class="registry" data-i18n="registry_intro">The greatest gift for us if you come to our wedding.</p>
+
+            <p class="registry">
+                <span data-i18n="registry_text">
+                    The gifts are handled by the sister of the bride and bridesmaid Christine Kirwald. Below, you can easily transfer money to her via paypal or by scanning a QR code. If these aren't options for you, please feel free to send her an email directly with the details at
+                </span>
+                <a href="mailto:christine.joseph87@gmail.com">christine.joseph87@gmail.com</a>.
+            </p>
+        </div>
+        
+        <div class="registry-grid">
+
+            <!-- Item 1 -->
+            <div class="registry-item">
+                <img src="images/registry/assiette-plate-bleu.png" alt="Dinner Plate" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="teller_groß">Dinner Plate</h3>
+                <p class="registry-desc">Price: 48,50€</p>
+                <p class="registry-status">
+                    Needed: <strong>12</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+            <!-- Item 2 -->
+            <div class="registry-item">
+                <img src="images/registry/assiette-creuse-bleu.png" alt="Soup Bowl" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="suppen_teller">Soup Plate</h3>
+                <p class="registry-desc">Price: : 48,50€</p>
+                <p class="registry-status">
+                    Needed: <strong>12</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+            <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/assiette-dessert-bleu.png" alt="Small Plate" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="teller_klein">Small Plate</Small></h3>
+                <p class="registry-desc">Price: 37€</p>
+                <p class="registry-status">
+                    Needed: <strong>12</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/the-us-bleu.png" alt="Tea Cup" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="tea_cup">Tea Cup</Small></h3>
+                <p class="registry-desc">Price: 62€</p>
+                <p class="registry-status">
+                    Needed: <strong>12</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/coquetiers.png" alt="Egg Cup" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="eier_becher">Egg Cup</Small></h3>
+                <p class="registry-desc">Price: 34€</p>
+                <p class="registry-status">
+                    Needed: <strong>8</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+            <div class="registry-item">
+                <img src="images/registry/file_15_46_jpg.webp" alt="Butter Dish" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="butter">Butter Dish</Small></h3>
+                <p class="registry-desc">Price: 152€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/plat-gateaux-bleu.png" alt="Cake Plate" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="kuchenplatte">Cake Plate</Small></h3>
+                <p class="registry-desc">Price: 100€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/theiere-bleu.png" alt="Teapot" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="teapot">Teapot</Small></h3>
+                <p class="registry-desc">Price: 235€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/sucrier-bleu.png" alt="Sugar Bowl" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="zuckerdose">Sugar Bowl</Small></h3>
+                <p class="registry-desc">Price: 105€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/cremier-bleu.png" alt="Creamer" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="milch">Creamer</Small></h3>
+                <p class="registry-desc">Price: 90€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/saladier-individuel-bleu.png" alt="Salad Bowl" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="schaelchen">Salad Bowl</Small></h3>
+                <p class="registry-desc">Price: 58€</p>
+                <p class="registry-status">
+                    Needed: <strong>12</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                                    <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/sauci_re-en-faience-de-gien-bleu.png" alt="Gravy Boat" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="sauciere">Gravy Boat</Small></h3>
+                <p class="registry-desc">Price: 100€</p>
+                <p class="registry-status">
+                    Needed: <strong>2</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+
+                        <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/plat-ovale-bleu.png" alt="Oval Serving Dish" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="ovale_platte">Oval Serving Dish</Small></h3>
+                <p class="registry-desc">Price: 132€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+
+                                    <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/ravier-bleu.png" alt="Small Serving Dish" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="ovale_platte_klein">Small Serving Dish</Small></h3>
+                <p class="registry-desc">Price: 60€</p>
+                <p class="registry-status">
+                    Needed: <strong>2</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                                                <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/Fondue.jpeg" alt="Fondue Set" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="fondue">Fondue Set</Small></h3>
+                <p class="registry-desc">Price: 170€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+                                                            <!-- Item 3 -->
+            <div class="registry-item">
+                <img src="images/registry/crepiere.jpeg" alt="Crêpe pan" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="crepe">Crêpe Pan</Small></h3>
+                <p class="registry-desc">Price: 90€</p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                    Already gifted: <strong>0</strong>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+
+
+            <div class="registry-item">
+                <img src="images/registry/kajo_und_moritz.jpeg" alt="Crêpe pan" class="registry-img" loading="lazy">
+                <h3 class="registry-title" data-i18n="honeymoon">Honeymoon Fund</Small></h3>
+                <p class="registry-desc"></p>
+                <p class="registry-status">
+                    Needed: <strong>1</strong><br>
+                </p>
+                <!--<a href="#" class="registry-button">Gift This Item</a>-->
+            </div>
+        </div>
+    </section>
+
+    <script>
+    /* LANGUAGE LOGIC */
+    const translations = {
+        en: {
+            title_date: "May 8 to May 10, 2026",
+            menu_venue: "Getting there",
+            menu_stay: "Where to stay",
+            menu_rooms: "Rooms",
+            menu_registry: "Registry",
+            ablauf: "Schedule",
+            friday: "Friday",
+            saturday: "Saturday",
+            sunday: "Sunday",
+            friday_evening: "From 7:00 PM",
+            time_church: "12:00 PM",
+            time_reception: "1:00 PM - 4:00 PM",
+            time_party: "7:00 PM",
+            time_brunch: "From 11:00 AM",
+            ceremony: "Ceremony",
+            reception: "Reception",
+            brunch: "Brunch",
+            dress_friday: "Élégant, mais sans excès",
+            dress_day: "Morning Dress / Dark Suit",
+            dress_evening: "Black Tie / Dark Suit",
+            open_maps: "Open in Google Maps",
+            open_maps_apple: "Open in Apple Maps",
+            getting_there: "Getting to <br> Château de Vauchelles",
+            by_plane: "Arriving by Plane",
+            plane_text: "There are three possible airports: Paris Beauvais, Charles de Gaulle, and Paris Orly. Paris Beauvais is the closest to the château (50 minutes by car), followed by Charles de Gaulle (60–90 minutes). We are happy to connect you with other guests to make the transfer from the airports to the château easier. Please feel free to get in touch with us about this.",
+            by_train: "Arriving by Train",
+            train_text: "The nearest major train station is Amiens. From there, you can reach the château in about 30 minutes by taxi or rental car. Public transportation can take you to Flixecourt, Saint-Ouen, or Vignacourt, from where it is a 5-15 minute drive.",
+            by_car: "Arriving by Car",
+            car_text: "Driving from Paris is straightforward via the A16 and D933. Parking is available on-site. We are happy to connect you with others for ridesharing options, so please reach out to us!",
+            stays: "Accomodations",
+            hotel_chateau: "The château itself offers rooms for 60 guests. We would like to prioritize families with children, but we don't anticipate that this will exhaust all rooms. The booking of the rooms has to go through us, so if you are interested in staying at the château, please reach out to us.",
+            hotel_jdb: "The hotel Jean De Bruges, located at the gateway to the Baie de Somme, has 9 rooms for 16 guests. All rooms have been reserved for the wedding. Bed and breakfast is included. The hotel is approximately 14 minutes by car from the venue.",
+            hotel_rb: "The hotel Le Relais du Beffroi, located in Saint-Riquier (Somme), offers a spa and private parking. There 8 rooms for 16 guests and 3 children. All rooms have been reserved for the wedding. The hotel is approximately 14 minutes by car from the venue.",
+            registry: "Registry",
+            registry_intro: "The greatest gift for us if you come to our wedding.",
+            registry_text: "The gifts are handled by the sister of the bride and bridesmaid Christine Kirwald. You are welcome to contact her directly by email with the details at ",
+            teller_groß: "Dinner Plate",
+            teller_klein: "Small Plate",
+            suppen_teller: "Soup Plate",
+            tea_cup: "Tea Cup",
+            eier_becher: "Egg Cup",
+            butter: "Butter Dish",
+            kuchenplatte: "Cake Plate",
+            teapot: "Teapot",
+            zuckerdose: "Sugar Bowl",
+            milch: "Creamer",
+            schaelchen: "Salad Bowl",
+            sauciere: "Gravy Boat",
+            ovale_platte: "Oval Serving Dish",
+            ovale_platte_klein: "Small Serving Dish",
+            fondue: "Fondue Set",
+            crepe: "Crêpe Pan",
+            honeymoon: "Honeymoon Fund"
+        },
+        de: {
+            title_date: "8. Mai bis 10. May 2026",
+            menu_venue: "Anreise",
+            menu_stay: "Unterkünfte",
+            menu_rooms: "Zimmer",
+            menu_registry: "Hochzeitstisch",
+            ablauf: "Ablauf",
+            friday: "Freitag",
+            saturday: "Samstag",
+            sunday: "Sonntag",
+            friday_evening: "Ab 19:00 Uhr",
+            time_church: "12:00 Uhr",
+            time_reception: "13:00 - 16:00 Uhr",
+            time_party: "19:00 Uhr",
+            time_brunch: "Ab 11:00 Uhr",
+            ceremony: "Kirchliche Trauung",
+            reception: "Empfang",
+            brunch: "Brunch",
+            dress_friday: "Élégant, mais sans excès",
+            dress_day: "Cutaway / Dunkler Anzug",
+            dress_evening: "Smoking / Dunkler Anzug",
+            open_maps: "In Google Maps öffnen",
+            open_maps_apple: "In Apple Maps öffnen",
+            getting_there: "Anreise zum <br> Château de Vauchelles",
+            by_plane: "Anreise mit dem Flugzeug",
+            plane_text: "Es gibt drei mögliche Flughäfen: Paris Beauvais, Charles de Gaulle und Paris Orly. Paris Beauvais ist dem Château am nächsten (50 Minuten mit dem Auto), gefolgt von Charles de Gaulle (60-90 Minuten). Gerne verbinden wir euch mit anderen Gästen, um die Fahrt von den Flughäfen zum Château zu erleichtern. Meldet euch dazu gerne bei uns.",
+            by_train: "Anreise mit dem Zug",
+            train_text: "Der nächstgelegene größere Bahnhof ist Amiens. Von dort erreicht ihr das Château in etwa 30 Minuten mit dem Taxi oder einem Mietwagen. Öffentliche Verkehrsmittel bringen euch bis nach Flixecourt, Saint-Ouen oder Vignacourt; von dort sind es 5–15 Minuten mit dem Auto.",
+            by_car: "Anreise mit dem Auto",
+            car_text: "Die Anreise von Paris ist unkompliziert über die A16 und D933. Parkmöglichkeiten sind direkt vor Ort vorhanden. Gerne bringen wir euch mit anderen Gästen für Mitfahrgelegenheiten in Kontakt - meldet Euch dazu bei uns!",
+            stays: "Unterkünfte",
+            hotel_chateau: "Das Château selbst hat Zimmer für insgesamt 60 Gäste. Wir würden gerne Familien mit Kindern Vorrecht auf die Zimmer im Château geben, gehen aber nicht davon aus, dass dadurch alle Zimmer belegt werden. Die Buchung der Zimmer läuft über uns - meldet Euch bei uns, falls Ihr im Château übernachten möchtet.",
+            hotel_jdb: "Das Hôtel Jean De Bruges, gelegen am Eingang zur Baie de Somme, verfügt über 9 Zimmer für 16 Gäste. Alle Zimmer wurden für die Hochzeit reserviert. Frühstück ist inklusive. Das Hotel ist etwa 14 Minuten mit dem Auto vom Veranstaltungsort entfernt.",
+            hotel_rb: "Das Hotel Le Relais du Beffroi in Saint-Riquier (Somme) bietet einen Spa-Bereich und private Parkplätze. Es gibt 8 Zimmer für 16 Erwachsene und 3 Kinder. Alle Zimmer wurden für die Hochzeit reserviert. Das Hotel ist etwa 14 Minuten mit dem Auto vom Veranstaltungsort entfernt.",
+            registry: "Hochzeitstisch",
+            registry_intro: "Für uns ist es das schönste Geschenk, dass Ihr zu unserer Hochzeit kommt.",
+            registry_text: "Die Geschenke werden von der Schwester der Braut und Trauzeugin Christine Kirwald verwaltet. Ihr könnt ihr gerne direkt eine E-Mail mit den Details senden an ",
+            teller_groß: "Großer Teller",
+            teller_klein: "Kleiner Teller",
+            suppen_teller: "Suppenteller",
+            tea_cup: "Tasse",
+            eier_becher: "Eierbecher",
+            butter: "Butterdose",
+            kuchenplatte: "Kuchenplatte",
+            teapot: "Teekanne",
+            zuckerdose: "Zuckerdose",
+            milch: "Milchkännchen",
+            schaelchen: "Schale",
+            sauciere: "Saucière",
+            ovale_platte: "Servierplatte oval",
+            ovale_platte_klein: "Servierplatte oval, klein",
+            fondue: "Fondue Set",
+            crepe: "Crêpe Pfanne",
+            honeymoon: "Flitterwochen Kasse"
+        }
+    };
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        localStorage.setItem("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            el.innerHTML = translations[lang][el.dataset.i18n];
+        });
+    }
+
+    const selector = document.getElementById("languageSelect");
+    const savedLang = localStorage.getItem("lang") || "en";
+    selector.value = savedLang;
+    setLanguage(savedLang);
+
+    selector.addEventListener("change", e => setLanguage(e.target.value));
+    </script>
+
+
+<script>
+    const hotels = document.querySelectorAll('.hotel-image-wrapper');
+
+    hotels.forEach(wrapper => {
+        const images = wrapper.querySelectorAll('.hotel-images img');
+        let index = 0;
+
+        const showImage = i => {
+            images.forEach(img => img.classList.remove('active'));
+            images[i].classList.add('active');
+        };
+
+        wrapper.querySelector('.prev').addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            showImage(index);
+        });
+
+        wrapper.querySelector('.next').addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            showImage(index);
+        });
+    });
+</script>
+</body>
+
+</html>
