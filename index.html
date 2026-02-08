@@ -597,7 +597,7 @@
             honeymoon: "Honeymoon Fund"
         },
         de: {
-            title_date: "8. Mai bis 10. May 2026",
+            title_date: "8. Mai bis 10. Mai 2026",
             menu_venue: "Anreise",
             menu_stay: "Unterkünfte",
             menu_rooms: "Zimmer",
@@ -671,27 +671,53 @@
 
 
 <script>
-    const hotels = document.querySelectorAll('.hotel-image-wrapper');
+const hotels = document.querySelectorAll('.hotel-image-wrapper');
 
-    hotels.forEach(wrapper => {
-        const images = wrapper.querySelectorAll('.hotel-images img');
-        let index = 0;
+hotels.forEach(wrapper => {
+    const images = wrapper.querySelectorAll('.hotel-images img');
+    let index = 0;
 
-        const showImage = i => {
-            images.forEach(img => img.classList.remove('active'));
-            images[i].classList.add('active');
-        };
+    const showImage = i => {
+        images.forEach(img => img.classList.remove('active'));
+        images[i].classList.add('active');
+    };
 
-        wrapper.querySelector('.prev').addEventListener('click', () => {
-            index = (index - 1 + images.length) % images.length;
-            showImage(index);
-        });
-
-        wrapper.querySelector('.next').addEventListener('click', () => {
-            index = (index + 1) % images.length;
-            showImage(index);
-        });
+    // Button clicks
+    wrapper.querySelector('.prev').addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        showImage(index);
     });
+
+    wrapper.querySelector('.next').addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        showImage(index);
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 50; // Minimum distance in pixels to count as a swipe
+
+    wrapper.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    wrapper.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const deltaX = touchEndX - touchStartX;
+
+        if (Math.abs(deltaX) > swipeThreshold) {
+            if (deltaX > 0) {
+                // Swipe right → previous image
+                index = (index - 1 + images.length) % images.length;
+            } else {
+                // Swipe left → next image
+                index = (index + 1) % images.length;
+            }
+            showImage(index);
+        }
+    });
+});
 </script>
 </body>
 
